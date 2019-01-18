@@ -1,0 +1,111 @@
+
+.menu-btn {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    /* margin:  auto auto; */
+    padding: 5px;
+    padding-right: 20px;
+    padding-top: 12px;
+    /* padding: 0 0 0 2px; */
+    /* background: rgb(221, 82, 82); */
+    
+}
+
+.menu-btn ul {
+    background: #2d4148;
+    border-radius: 2px;
+    width: 180px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu-btn>ul {
+    position: absolute;
+    width: 180px;
+    right: 20px;
+    top: 52px;
+    transition: opacity .4s;
+}
+
+
+.menu-btn.active ul {
+    opacity: 1;
+    max-height: 800px;
+}
+
+.menu-btn ul li a {
+    color: #dccabd !important ;
+    display: block;
+    padding: 10px 20px;
+
+}
+
+.menu-btn ul li a:hover {
+    background: #346970;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.bar-box {
+    width: 38px;
+    padding: 3px;
+    background: #346970;
+    border-radius: 3px;
+    border: 1px solid #dccabd;
+
+}
+
+.bar {
+    width: 28px;
+    height: 1px;
+    background: #dccabd;
+    margin: 6px auto;
+    border-radius: 2px;
+    transition: .4s;
+}
+
+.active .bar1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.active .bar2 {
+    opacity: 0;
+}
+
+.active .bar3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.sub-menu {
+    display: none;
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+}
+@media screen and (max-width: 540px){
+    .nav-link{
+        display:none;
+    }
+    .logo{
+        margin-left:10px ;
+    }
+}
+@media screen and (min-width: 540px){
+    .menu-btn-wrapper{
+        display:none;
+    }
+}
